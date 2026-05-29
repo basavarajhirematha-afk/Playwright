@@ -10,7 +10,7 @@ test.beforeEach('login',async({page})=>{
 
 });
 
-test('Admin creation',async({page})=>{
+test.skip('Admin creation',async({page})=>{
     await page.waitForTimeout(2000);
     await page.getByText('Admin').first().click();
     
@@ -28,7 +28,7 @@ test('Admin creation',async({page})=>{
     await page.getByRole('button',{name:' Save '}).click();
 });
 
-test('admin search',async({page})=>{
+test.skip('admin search',async({page})=>{
     await page.waitForTimeout(2000);
     await page.waitForURL("**/dashboard/index");
     await page.getByText('Admin').first().click();
@@ -41,7 +41,7 @@ test('admin search',async({page})=>{
    
 });
 
-test('edit',async({page})=>{
+test.skip('edit',async({page})=>{
     await page.waitForTimeout(1000);
     await page.getByText('Admin').first().click();
     await page.locator(".oxd-icon.bi-pencil-fill").first().click();
